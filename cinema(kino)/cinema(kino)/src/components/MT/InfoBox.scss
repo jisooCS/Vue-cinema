@@ -1,0 +1,77 @@
+.infobox {
+    margin-top: 30px;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: 500ms;
+    &.active {
+        height: 700px;
+    }
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: rgba(20, 20, 20, 0.70);
+        border-radius: 50%;
+        padding: 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    &__block {
+        height: 100%;
+        &-img {
+            height: 100%;
+            width: 60%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            object-fit: cover;   
+        }
+        &-content {
+            background: linear-gradient(90deg, #000 40%, rgba(0, 0, 0, 0.20) 60%, rgba(0, 0, 0, 0.00) 68.23%);
+            height: 100%;
+            position: relative;
+        }
+        &-info {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            padding-left: 50px;
+            &-title {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 50px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+            }
+            &-text {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 20px;
+                line-height: 150%;
+            }
+            &-descr {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 20px;
+                font-style: normal;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                & span {
+                    font-family: Montserrat;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

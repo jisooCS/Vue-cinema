@@ -1,0 +1,193 @@
+@import '@/assets/styles/settings/common.scss';
+
+.main__dynamic {
+    margin-top: 90px;
+    padding-bottom: 70px;
+}
+
+.intro {
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        object-fit: cover;
+        filter: blur(10px);
+    }
+    &__block {
+        background: linear-gradient(90deg, #000 40%, rgba(0, 0, 0, 0.20) 65%, rgba(0, 0, 0, 0.00) 67.73%);
+        position: relative;
+        min-height: 700px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px 50px;
+        &-left {
+            width: 60%;
+            @include media(1000) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-title {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 50px;
+                font-weight: 700;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                @include media(576) {
+                    font-size: 30px;
+                    text-align: center;
+                }
+            }
+            &-text {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 150%;
+                margin: 25px 0; 
+                @include media(576) {
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+            &-descr {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 20px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                @include media(576) {
+                    text-align: center;
+                    font-size: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+                & span {
+                    font-family: Montserrat;
+                    font-weight: 700;
+                }
+            }
+        }
+        &-right {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            @include media(1000) {
+                display: none;
+            }
+            &-img {
+                max-width: 311px;
+                width: 100%;
+                height: 462px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+        &-actors {
+            margin-top: 60px;
+            width: 100%;
+            &-title {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 30px;
+                @include media(576) {
+                    text-align: center;
+                }
+            }
+            & .actors {
+                max-width: none;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.info {
+    margin: 50px 0;
+    &__box {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 40px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            &-name {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            &-value {
+                color: #FFF;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.rec {
+    &__title {
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+        gap: 24px;
+        margin-top: 50px;
+        grid-auto-rows: 470px;
+        &-item {
+            background: linear-gradient(359deg, #000 0%, rgba(0, 0, 0, 0.72) 51.56%, rgba(0, 0, 0, 0.00) 100%);
+            position: relative;
+            border-radius: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            cursor: pointer;
+            &-img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -2;
+            }
+            &-title {
+                color: #FFF;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 400;
+                position: absolute;
+                bottom: 15px;
+                width: 100%;
+            }
+        }
+    }
+}

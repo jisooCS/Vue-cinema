@@ -1,0 +1,85 @@
+@import '@/assets/styles/settings/common.scss';
+
+.main__content {
+    padding: 25px 0;
+    &-title {
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        margin-left: 100px;
+        @include media(800) {
+            margin-left: 15px;
+        }
+    }
+    &-swiper {
+        padding: 0 100px !important;
+        @include media(800) {
+            padding:  0 50px 0 15px !important;
+        }
+        &-item {
+            height: 462px !important;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.30);
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                background: none;
+                cursor: pointer;
+            }
+            &-page {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 30px;
+            }
+            &-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -5;
+            }
+            &-title {
+                font-size: 20px;
+                text-transform: uppercase;
+                color: white;
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+    &::after {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+    }
+    &.swiper-button-disabled {
+        display: none;
+    }
+    @include media(800) {
+        display: none !important;
+    }
+}
